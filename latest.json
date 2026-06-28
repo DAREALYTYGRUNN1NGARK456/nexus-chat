@@ -4,7 +4,7 @@
   "pub_date": "2026-01-01T00:00:00Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO/releases/download/v0.0.0/Nexus_0.0.0_x64-setup.exe",
+      "url": "https://github.com/DAREALYTYGRUNN1NGARK456/nexus-chat/releases/download/v0.0.0/Nexus_0.0.0_x64-setup.exe",
       "signature": "REPLACE_WITH_SIGNATURE_FROM_BUILD_OUTPUT"
     }
   }
