@@ -1,0 +1,151 @@
+/* Tailwind CSS v4 */
+@import "tailwindcss";
+
+/* Bootstrap */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+/* ── Custom theme variables ── */
+:root {
+  --nexus-bg:        #0b0d14;
+  --nexus-surface:   #0f1117;
+  --nexus-surface2:  #161820;
+  --nexus-rail:      #070810;
+  --nexus-border:    rgba(255, 255, 255, 0.06);
+  --nexus-blue:      #5865F2;
+  --nexus-purple:    #7c3aed;
+  --nexus-green:     #3ba55c;
+  --nexus-text:      #e5e7eb;
+  --nexus-muted:     #6b7280;
+  --nexus-dimmed:    #4b5563;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: var(--nexus-bg);
+  color: var(--nexus-text);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar       { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+
+/* ── Selection ── */
+::selection { background: rgba(88,101,242,0.4); color: #fff; }
+
+/* ── Autofill ── */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #0f111a inset !important;
+  -webkit-text-fill-color: #e5e7eb !important;
+}
+
+/* ── Message group hover ── */
+.msg-group:hover {
+  background: rgba(255,255,255,0.02);
+  border-radius: 4px;
+}
+
+/* ── Nexus input ── */
+.nexus-input {
+  width: 100%;
+  padding: 10px 14px;
+  background: #0f111a;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  color: #e5e7eb;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.nexus-input:focus {
+  border-color: var(--nexus-blue);
+  box-shadow: none;
+}
+
+/* ── Nexus button primary ── */
+.nexus-btn-primary {
+  width: 100%;
+  padding: 11px 0;
+  background: linear-gradient(135deg, #5865F2, #7c3aed);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 20px rgba(88,101,242,0.4);
+}
+.nexus-btn-primary:disabled {
+  background: #3b4299;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* ── Bootstrap modal dark override ── */
+.nexus-modal .modal-content {
+  background: #161820;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  color: #e5e7eb;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.7);
+}
+.nexus-modal .modal-header {
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 20px 24px 16px;
+}
+.nexus-modal .modal-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #e5e7eb;
+}
+.nexus-modal .modal-body {
+  padding: 24px;
+}
+.nexus-modal .btn-close {
+  filter: invert(1) grayscale(1) brightness(1.5);
+  opacity: 0.5;
+}
+.nexus-modal .btn-close:hover {
+  opacity: 1;
+}
+
+/* ── Bootstrap form controls dark override ── */
+.nexus-modal .form-control,
+.nexus-modal .form-select {
+  background: #0f111a;
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #e5e7eb;
+  border-radius: 8px;
+}
+.nexus-modal .form-control:focus,
+.nexus-modal .form-select:focus {
+  background: #0f111a;
+  border-color: #5865F2;
+  color: #e5e7eb;
+  box-shadow: none;
+}
+.nexus-modal .form-label {
+  color: #9ca3af;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
